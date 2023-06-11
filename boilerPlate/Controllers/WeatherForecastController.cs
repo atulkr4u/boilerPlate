@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using boilerPlate.DataService.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace boilerPlate.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]/[action]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -12,17 +13,15 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    private readonly IWeatherService _weatherService;
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherService weatherService)
     {
         _logger = logger;
+        _weatherService = weatherService;
     }
-
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet]
+    public IEnumerable<WeatherForecast> GetAll()
     {
-        _logger.LogError("Hi");
-
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
@@ -30,6 +29,11 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
+    }
+    [HttpGet]
+    public int GetByCity(string cityName)
+    {
+        return _weatherService.GetCurrentTemprature(cityName);   
     }
 }
 

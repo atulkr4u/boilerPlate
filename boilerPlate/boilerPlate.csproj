@@ -40,5 +40,11 @@
     <ProjectReference Include="..\boilerPlate.Infra.Services\boilerPlate.Infra.Services.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\boilerPlate.DataService.Contracts\boilerPlate.DataService.Contracts.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\boilerPlate.DataService.Services\boilerPlate.DataService.Services.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

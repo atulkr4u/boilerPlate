@@ -1774,6 +1774,30 @@
           }
         }
       },
+      "boilerPlate.DataService.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/boilerPlate.DataService.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/boilerPlate.DataService.Contracts.dll": {}
+        }
+      },
+      "boilerPlate.DataService.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "boilerPlate.DataService.Contracts": "1.0.0",
+          "boilerPlate.Infra.ServiceContracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/boilerPlate.DataService.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/boilerPlate.DataService.Services.dll": {}
+        }
+      },
       "boilerPlate.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -5319,6 +5343,16 @@
         "telegram.bot.nuspec"
       ]
     },
+    "boilerPlate.DataService.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../boilerPlate.DataService.Contracts/boilerPlate.DataService.Contracts.csproj",
+      "msbuildProject": "../boilerPlate.DataService.Contracts/boilerPlate.DataService.Contracts.csproj"
+    },
+    "boilerPlate.DataService.Services/1.0.0": {
+      "type": "project",
+      "path": "../boilerPlate.DataService.Services/boilerPlate.DataService.Services.csproj",
+      "msbuildProject": "../boilerPlate.DataService.Services/boilerPlate.DataService.Services.csproj"
+    },
     "boilerPlate.Domain/1.0.0": {
       "type": "project",
       "path": "../boilerPlate.Domain/boilerPlate.Domain.csproj",
@@ -5347,6 +5381,8 @@
       "StackExchange.Redis >= 2.6.111",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Telegram.Bot >= 19.0.0",
+      "boilerPlate.DataService.Contracts >= 1.0.0",
+      "boilerPlate.DataService.Services >= 1.0.0",
       "boilerPlate.Domain >= 1.0.0",
       "boilerPlate.Infra.ServiceContracts >= 1.0.0",
       "boilerPlate.Infra.Services >= 1.0.0"
@@ -5377,6 +5413,12 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "/Users/atul/github/boilerPlate/boilerPlate.DataService.Contracts/boilerPlate.DataService.Contracts.csproj": {
+              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.DataService.Contracts/boilerPlate.DataService.Contracts.csproj"
+            },
+            "/Users/atul/github/boilerPlate/boilerPlate.DataService.Services/boilerPlate.DataService.Services.csproj": {
+              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.DataService.Services/boilerPlate.DataService.Services.csproj"
+            },
             "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
               "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
             },

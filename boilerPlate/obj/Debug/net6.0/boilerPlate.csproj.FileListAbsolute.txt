@@ -160,3 +160,7 @@
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/ref/boilerPlate.dll
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/boilerPlate.pdb
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/boilerPlate.genruntimeconfig.cache
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.DataService.Contracts.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.DataService.Services.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.DataService.Contracts.pdb
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.DataService.Services.pdb

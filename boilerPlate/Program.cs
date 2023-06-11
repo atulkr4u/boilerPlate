@@ -6,6 +6,9 @@ using Serilog.Sinks.MongoDB;
 using StackExchange.Redis;
 using boilerPlate.Infra.Services;
 using boilerPlate.Infra.ServiceContracts;
+using boilerPlate.DataService.Contracts;
+using boilerPlate.DataService.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -16,7 +19,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ICachingService, CachingService>();
+builder.Services.AddSingleton<IWeatherService, WeatherService>();
 builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost:6379"));
+
 
 //Add Serilog Start
 
