@@ -22,8 +22,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ICachingService, CachingService>();
 builder.Services.AddSingleton<IWeatherService, WeatherService>();
 builder.Services.AddSingleton<IConfigService, ConfigService>();
-
-builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost:6379"));
 //Steps to Start Redis:
 //1.Run Command "redis-server"
 //2.Check Redis: "redis-cli" then "lpush demos redis-macOS-demo" then "rpop demos"
@@ -37,6 +35,7 @@ builder.Logging.AddSerilog();
 // Configure Redis connection
 
 var app = builder.Build();
+var configService = app.Services.GetService<IConfigService>();
 
 ////Serilog Setup Start
 ///
@@ -44,7 +43,7 @@ Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.MongoDB("mongodb://localhost:27017/logs", collectionName: "logs", restrictedToMinimumLevel: LogEventLevel.Information)
-        .WriteTo.Sink(new TelegramCustomSink("6192549985:AAElMvWhByCK0saq8rth3CJ-KEBzr9iBmsk", LogEventLevel.Error))
+        .WriteTo.Sink(new TelegramCustomSink("6192549985:AAElMvWhByCK0saq8rth3CJ-KEBzr9iBmsk", LogEventLevel.Error, configService))
       .CreateLogger();
 
 ////Serilog Setup End

@@ -87,6 +87,25 @@ namespace boilerPlate.Domain.Helpers
                     return null;
             }
         }
+        public static int ToSafeInt(this string Input)
+        {
+            if (string.IsNullOrEmpty(Input))
+            {
+                return 0;
+            }
+            if (Input.Contains("."))
+            {
+                float i;
+                float.TryParse(Input, out i);
+                return (int)i;
+            }
+            else
+            {
+                int i = 0;
+                int.TryParse(Input, out i);
+                return i;
+            }
+        }
     }
 }
 

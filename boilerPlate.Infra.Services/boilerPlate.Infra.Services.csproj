@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="StackExchange.Redis" Version="2.6.111" />
+    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\boilerPlate.Infra.ServiceContracts\boilerPlate.Infra.ServiceContracts.csproj" />
+    <ProjectReference Include="..\boilerPlate.Domain\boilerPlate.Domain.csproj" />
   </ItemGroup>
 </Project>

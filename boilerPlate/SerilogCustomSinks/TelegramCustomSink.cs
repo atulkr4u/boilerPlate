@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using boilerPlate.Domain.Helpers;
+using boilerPlate.Infra.ServiceContracts;
 using Serilog.Core;
 using Serilog.Events;
 using Telegram.Bot;
@@ -11,11 +12,12 @@ namespace boilerPlate.SerilogCustomSinks
     {
         private readonly TelegramBotClient _telegramBotClient;
         private readonly LogEventLevel _minimumLevel;
-
-        public TelegramCustomSink(string botToken, LogEventLevel minimumLevel)
+        IConfigService _configService;
+        public TelegramCustomSink(string botToken, LogEventLevel minimumLevel, IConfigService configService)
         {
             _telegramBotClient = new TelegramBotClient(botToken);
             _minimumLevel = minimumLevel;
+            _configService = configService;
         }
 
         public void Emit(LogEvent logEvent)
@@ -26,6 +28,9 @@ namespace boilerPlate.SerilogCustomSinks
                 if (logEvent.Exception != null)
                 {
                     var msg = new StringBuilder();
+                    msg.Append($"Environment:{_configService.CurrentEnv()}");
+                    msg.Append(">>>>>>>>>>>>>>");
+
                     if (logEvent.Properties.ContainsKey("RequestPath"))
                     {
                         msg.Append($"RequestPath:{logEvent.Properties["RequestPath"]}");

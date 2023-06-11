@@ -12,9 +12,12 @@ namespace boilerPlate.InfraServices
         }
         public string Get(string key)
         {
-            var env = _config.GetSection("Environment").Value.ToString();
-            return _config.GetSection($"{key}:{env}").Value.ToString();
+            return _config.GetSection($"{key}:{CurrentEnv()}").Value.ToString();
         }
-    }
+        public string CurrentEnv()
+        {
+           return _config.GetSection("Environment").Value.ToString();
+        }
+}
 }
 
