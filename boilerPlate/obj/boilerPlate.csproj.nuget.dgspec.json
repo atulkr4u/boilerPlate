@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj": {}
+  },
+  "projects": {
+    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "projectName": "boilerPlate.Domain",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "packagesPath": "/Users/atul/.nuget/packages/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/atul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
+        "projectName": "boilerPlate",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
+        "packagesPath": "/Users/atul/.nuget/packages/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/atul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.MongoDB": {
+              "target": "Package",
+              "version": "[5.3.1, )"
+            },
+            "Serilog.Sinks.Telegram": {
+              "target": "Package",
+              "version": "[0.2.1, )"
+            },
+            "Serilog.Sinks.Telegram.Alternative": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "Serilog.Sinks.TelegramBot": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Serilog.Sinks.TelegramClient": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[19.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

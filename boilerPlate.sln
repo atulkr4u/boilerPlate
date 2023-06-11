@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boilerPlate", "boilerPlate\boilerPlate.csproj", "{8883758F-FBFF-4A61-9A3E-AB2DC5C53F1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boilerPlate.Domain", "boilerPlate.Domain\boilerPlate.Domain.csproj", "{56FD3E6F-E1E0-4FC1-8861-47B472B55981}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8883758F-FBFF-4A61-9A3E-AB2DC5C53F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8883758F-FBFF-4A61-9A3E-AB2DC5C53F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8883758F-FBFF-4A61-9A3E-AB2DC5C53F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8883758F-FBFF-4A61-9A3E-AB2DC5C53F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FD3E6F-E1E0-4FC1-8861-47B472B55981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FD3E6F-E1E0-4FC1-8861-47B472B55981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FD3E6F-E1E0-4FC1-8861-47B472B55981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FD3E6F-E1E0-4FC1-8861-47B472B55981}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ECE3782-767D-460D-8A82-0EA519F90F52}
+	EndGlobalSection
+EndGlobal
