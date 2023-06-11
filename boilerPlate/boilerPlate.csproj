@@ -18,6 +18,7 @@
     <PackageReference Include="Serilog.Sinks.TelegramClient" Version="2.0.1" />
     <PackageReference Include="Serilog.Sinks.TelegramBot" Version="1.1.0" />
 
+    <PackageReference Include="StackExchange.Redis" Version="2.6.111" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\boilerPlate.Domain\boilerPlate.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+   
+    <ProjectReference Include="..\boilerPlate.Infra.ServiceContracts\boilerPlate.Infra.ServiceContracts.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\boilerPlate.Infra.Services\boilerPlate.Infra.Services.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\boilerPlate.DataService.Contracts\boilerPlate.DataService.Contracts.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\boilerPlate.DataService.Services\boilerPlate.DataService.Services.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
