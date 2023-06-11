@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5erhE+Qv+hOs3HpzyfW5JxmoUGNsXny45APR2+QDB65LnLWG0vrpv6WtsqMIIKqxX0hmr0qJ+lOcN+bKJ80Vuw==",
+  "dgSpecHash": "7kL8Rf0ru5VLY87NTbnACsGnekCkOWCtacfM0krGpcykJqj2CZ3hVyzWROcdmjMsvNc4Zc9mmbTJoi6y2dYejA==",
   "success": true,
-  "projectFilePath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+  "projectFilePath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
   "expectedPackageFiles": [
     "/Users/atul/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],

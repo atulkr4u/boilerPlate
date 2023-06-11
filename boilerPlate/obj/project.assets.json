@@ -464,6 +464,22 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
         "type": "package",
         "runtimeTargets": {
@@ -883,6 +899,22 @@
           "lib/net5.0/SharpCompress.dll": {}
         }
       },
+      "StackExchange.Redis/2.6.111": {
+        "type": "package",
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.2"
+        },
+        "compile": {
+          "lib/net5.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -1135,6 +1167,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Pipelines/5.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Linq/4.3.0": {
@@ -1740,6 +1785,30 @@
         },
         "runtime": {
           "bin/placeholder/boilerPlate.Domain.dll": {}
+        }
+      },
+      "boilerPlate.Infra.ServiceContracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/boilerPlate.Infra.ServiceContracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/boilerPlate.Infra.ServiceContracts.dll": {}
+        }
+      },
+      "boilerPlate.Infra.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "StackExchange.Redis": "2.6.111",
+          "boilerPlate.Infra.ServiceContracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/boilerPlate.Infra.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/boilerPlate.Infra.Services.dll": {}
         }
       }
     }
@@ -2436,6 +2505,29 @@
         "packageIcon.png"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.2": {
+      "sha512": "Bhk0FWxH1paI+18zr1g5cTL+ebeuDcBCR+rRFO+fKEhretgjs7MF2Mc1P64FGLecWp4zKCUOPzngBNrqVyY7Zg==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "sha512": "7VSGO0URRKoMEAq0Sc9cRz8mb6zbyx/BZDEWhgPdzzpmFhkam3fJ1DAGWFXBI4nGlma+uPKpfuMQP5LXRnOH5g==",
       "type": "package",
@@ -2965,6 +3057,27 @@
         "lib/netstandard2.1/SharpCompress.dll",
         "sharpcompress.0.30.1.nupkg.sha512",
         "sharpcompress.nuspec"
+      ]
+    },
+    "StackExchange.Redis/2.6.111": {
+      "sha512": "49NlwihVG9I1YaPqYBx2e2yPqC4ecXMog8zVXMC3rjj2kufGkC3ofqvhOPBKP0c9ZQdJ3hhzduM7ckOQTE+gxg==",
+      "type": "package",
+      "path": "stackexchange.redis/2.6.111",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net5.0/StackExchange.Redis.dll",
+        "lib/net5.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.6.111.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.2.3": {
@@ -3697,6 +3810,32 @@
         "ref/xamarinwatchos10/_._",
         "system.io.filesystem.primitives.4.3.0.nupkg.sha512",
         "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/5.0.1": {
+      "sha512": "qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
+      "type": "package",
+      "path": "system.io.pipelines/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.5.0.1.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Linq/4.3.0": {
@@ -5184,6 +5323,16 @@
       "type": "project",
       "path": "../boilerPlate.Domain/boilerPlate.Domain.csproj",
       "msbuildProject": "../boilerPlate.Domain/boilerPlate.Domain.csproj"
+    },
+    "boilerPlate.Infra.ServiceContracts/1.0.0": {
+      "type": "project",
+      "path": "../boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj",
+      "msbuildProject": "../boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj"
+    },
+    "boilerPlate.Infra.Services/1.0.0": {
+      "type": "project",
+      "path": "../boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj",
+      "msbuildProject": "../boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5195,9 +5344,12 @@
       "Serilog.Sinks.Telegram.Alternative >= 1.3.0",
       "Serilog.Sinks.TelegramBot >= 1.1.0",
       "Serilog.Sinks.TelegramClient >= 2.0.1",
+      "StackExchange.Redis >= 2.6.111",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Telegram.Bot >= 19.0.0",
-      "boilerPlate.Domain >= 1.0.0"
+      "boilerPlate.Domain >= 1.0.0",
+      "boilerPlate.Infra.ServiceContracts >= 1.0.0",
+      "boilerPlate.Infra.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5206,11 +5358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
+      "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj",
       "projectName": "boilerPlate",
-      "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
+      "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj",
       "packagesPath": "/Users/atul/.nuget/packages/",
-      "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/obj/",
+      "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/atul/.nuget/NuGet/NuGet.Config"
@@ -5225,8 +5377,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
-              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
+            "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
+            },
+            "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj": {
+              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj"
+            },
+            "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj": {
+              "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj"
             }
           }
         }
@@ -5268,6 +5426,10 @@
           "Serilog.Sinks.TelegramClient": {
             "target": "Package",
             "version": "[2.0.1, )"
+          },
+          "StackExchange.Redis": {
+            "target": "Package",
+            "version": "[2.6.111, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

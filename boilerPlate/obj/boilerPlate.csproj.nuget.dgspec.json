@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj": {}
+    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj": {}
   },
   "projects": {
-    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+    "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
         "projectName": "boilerPlate.Domain",
-        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
         "packagesPath": "/Users/atul/.nuget/packages/",
-        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/obj/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/atul/.nuget/NuGet/NuGet.Config"
@@ -62,14 +62,66 @@
         }
       }
     },
-    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj": {
+    "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
-        "projectName": "boilerPlate",
-        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/boilerPlate.csproj",
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj",
+        "projectName": "boilerPlate.Infra.ServiceContracts",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj",
         "packagesPath": "/Users/atul/.nuget/packages/",
-        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate/obj/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/atul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj",
+        "projectName": "boilerPlate.Infra.Services",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj",
+        "packagesPath": "/Users/atul/.nuget/packages/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/atul/.nuget/NuGet/NuGet.Config"
@@ -84,8 +136,76 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
-                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
+              "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj": {
+                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.111, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj",
+        "projectName": "boilerPlate",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.csproj",
+        "packagesPath": "/Users/atul/.nuget/packages/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/atul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj"
+              },
+              "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj": {
+                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.ServiceContracts/boilerPlate.Infra.ServiceContracts.csproj"
+              },
+              "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj": {
+                "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Infra.Services/boilerPlate.Infra.Services.csproj"
               }
             }
           }
@@ -127,6 +247,10 @@
             "Serilog.Sinks.TelegramClient": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.111, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

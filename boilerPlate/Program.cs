@@ -3,6 +3,9 @@ using boilerPlate.SerilogCustomSinks;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.MongoDB;
+using StackExchange.Redis;
+using boilerPlate.Infra.Services;
+using boilerPlate.Infra.ServiceContracts;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -12,12 +15,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<ICachingService, CachingService>();
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost:6379"));
+
 //Add Serilog Start
 
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 
 //Add Serilog End
+// Configure Redis connection
 
 var app = builder.Build();
 

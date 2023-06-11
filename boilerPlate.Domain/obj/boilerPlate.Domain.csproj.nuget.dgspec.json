@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {}
+    "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {}
   },
   "projects": {
-    "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
+    "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "projectUniqueName": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
         "projectName": "boilerPlate.Domain",
-        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
+        "projectPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/boilerPlate.Domain.csproj",
         "packagesPath": "/Users/atul/.nuget/packages/",
-        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate/boilerPlate.Domain/obj/",
+        "outputPath": "/Users/atul/github/boilerPlate/boilerPlate.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/atul/.nuget/NuGet/NuGet.Config"

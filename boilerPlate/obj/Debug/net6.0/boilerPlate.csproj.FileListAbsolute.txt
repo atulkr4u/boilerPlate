@@ -104,6 +104,7 @@
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/MongoDB.Driver.Core.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/MongoDB.Libmongocrypt.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Pipelines.Sockets.Unofficial.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Serilog.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Serilog.AspNetCore.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Serilog.Extensions.Hosting.dll
@@ -120,6 +121,7 @@
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Serilog.Sinks.TelegramBot.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Serilog.Sinks.Telegram.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/SharpCompress.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/StackExchange.Redis.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -138,7 +140,11 @@
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Domain.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Infra.ServiceContracts.dll
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Infra.Services.dll
 /Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Domain.pdb
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Infra.ServiceContracts.pdb
+/Users/atul/github/boilerPlate/boilerPlate/bin/Debug/net6.0/boilerPlate.Infra.Services.pdb
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/boilerPlate.csproj.AssemblyReference.cache
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/boilerPlate.GeneratedMSBuildEditorConfig.editorconfig
 /Users/atul/github/boilerPlate/boilerPlate/obj/Debug/net6.0/boilerPlate.AssemblyInfoInputs.cache
