@@ -10,28 +10,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace boilerPlate.Controllers
 {
     [Route("api/[controller]/[action]")]
-    public class ExampleController : Controller
+    public class TryRedisController : Controller
     {
-        private readonly ILogger<ExampleController> _logger;
+        private readonly ILogger<TryRedisController> _logger;
         ICachingService _cacheService;
-        public ExampleController(ILogger<ExampleController> logger, ICachingService cacheService)
+        public TryRedisController(ILogger<TryRedisController> logger, ICachingService cacheService)
         {
             _logger = logger;
             _cacheService = cacheService;
         }
-
-        [HttpGet]
-        public string TestLogging(string id)
-        {
-            _logger.LogError(id);
-            return $"Sent Message:{id}";
-        }
-        [HttpGet]
-        public string TestException()
-        {
-            throw new Exception("This is expected exception");
-        }
-
         [HttpGet]
         public string AddKey(string key,string value)
         {
@@ -54,6 +41,7 @@ namespace boilerPlate.Controllers
         {
             return _cacheService.GetHash(hash,key);
         }
+        
 
 
     }

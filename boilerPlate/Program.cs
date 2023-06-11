@@ -8,6 +8,7 @@ using boilerPlate.Infra.Services;
 using boilerPlate.Infra.ServiceContracts;
 using boilerPlate.DataService.Contracts;
 using boilerPlate.DataService.Services;
+using boilerPlate.InfraServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ICachingService, CachingService>();
 builder.Services.AddSingleton<IWeatherService, WeatherService>();
-builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost:6379"));
+builder.Services.AddSingleton<IConfigService, ConfigService>();
 
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost:6379"));
+//Steps to Start Redis:
+//1.Run Command "redis-server"
+//2.Check Redis: "redis-cli" then "lpush demos redis-macOS-demo" then "rpop demos"
 
 //Add Serilog Start
 

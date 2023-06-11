@@ -24,10 +24,12 @@
   <ItemGroup>
     <None Remove="SerilogCustomSinks\" />
     <None Remove="Middleware\" />
+    <None Remove="InfraServices\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SerilogCustomSinks\" />
     <Folder Include="Middleware\" />
+    <Folder Include="InfraServices\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\boilerPlate.Domain\boilerPlate.Domain.csproj">
