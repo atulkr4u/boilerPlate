@@ -31,7 +31,7 @@ namespace boilerPlate.BGServices
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogCritical($"Guided App Service Running:{DateTimeOffset.Now}");
+               // _logger.LogCritical($"Guided App Service Running:{DateTimeOffset.Now}");
                 await Task.Delay(36000, stoppingToken);
             }
         }
