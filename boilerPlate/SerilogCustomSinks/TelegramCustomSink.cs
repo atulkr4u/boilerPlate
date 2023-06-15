@@ -13,11 +13,20 @@ namespace boilerPlate.SerilogCustomSinks
         private readonly TelegramBotClient _telegramBotClient;
         private readonly LogEventLevel _minimumLevel;
         IConfigService _configService;
-        public TelegramCustomSink(string botToken, LogEventLevel minimumLevel, IConfigService configService)
+        private readonly string _chatId=null;
+        private readonly string _telegramToken = null;
+        public TelegramCustomSink(LogEventLevel minimumLevel, IConfigService configService)
         {
-            _telegramBotClient = new TelegramBotClient(botToken);
+            _telegramToken = "6192549985:AAElMvWhByCK0saq8rth3CJ-KEBzr9iBmsk";
+            _telegramBotClient = new TelegramBotClient(_telegramToken);
             _minimumLevel = minimumLevel;
             _configService = configService;
+            _chatId = "607833984";
+        }
+
+        public void Dispose(string key)
+        {
+            throw new NotImplementedException();
         }
 
         public void Emit(LogEvent logEvent)
@@ -48,7 +57,7 @@ namespace boilerPlate.SerilogCustomSinks
 
                     message = msg.ToString();
                 }
-                _telegramBotClient.SendTextMessageAsync("607833984", message.TakeTillLength(4000)).GetAwaiter().GetResult();
+                _telegramBotClient.SendTextMessageAsync(_chatId, message.TakeTillLength(4000)).GetAwaiter().GetResult();
              }
         }
     }
