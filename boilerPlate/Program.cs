@@ -13,6 +13,7 @@ using boilerPlate.BGServices;
 using Microsoft.AspNetCore.Hosting;
 using boilerPlate.Controllers;
 using MediatR;
+using MediatR.NotificationPublishers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +24,20 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddHostedService<DefaultBGService>();
 
-builder.Services.AddMediatR(typeof(NewsItem).Assembly);
+//builder.Services.AddMediatR(typeof(NewsItem).Assembly);
+builder.Services.AddMediatR(config => {
+    config.RegisterServicesFromAssemblyContaining<NewsItem>();
 
+
+    // Setting the publisher directly will make the instance a Singleton.
+    config.NotificationPublisher = new TaskWhenAllPublisher();
+
+    // Seting the publisher type will:
+    // 1. Override the value set on NotificationPublisher
+    // 2. Use the service lifetime from the ServiceLifetime property below
+    config.NotificationPublisherType = typeof(TaskWhenAllPublisher);
+    config.Lifetime = ServiceLifetime.Transient;
+});
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

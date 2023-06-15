@@ -54,7 +54,9 @@ namespace boilerPlate.Controllers
         }
         public Task Handle(NewsNotification notification, CancellationToken cancellationToken)
         {
-            _logger.LogError($"Title:{notification.NewsItem.Title}>>>>>{notification.NewsItem.FullNews}");
+            _logger.LogError($"1.Start:Title:{notification.NewsItem.Title}>>>>>{notification.NewsItem.FullNews}");
+            Task.Delay(5000);
+            _logger.LogError($"1.EndTitle:{notification.NewsItem.Title}>>>>>{notification.NewsItem.FullNews}");
             // Perform any required processing here
             return Task.CompletedTask;
         }
@@ -68,7 +70,9 @@ namespace boilerPlate.Controllers
         }
         public Task Handle(NewsNotification notification, CancellationToken cancellationToken)
         {
-            _logger.LogError($"Title:{notification.NewsItem.Title}------{notification.NewsItem.FullNews}");
+            _logger.LogError($"2.Start Title:{notification.NewsItem.Title}------{notification.NewsItem.FullNews}");
+            Task.Delay(5000);
+            _logger.LogError($"2.End Title:{notification.NewsItem.Title}------{notification.NewsItem.FullNews}");
             // Perform any required processing here
             return Task.CompletedTask;
         }
