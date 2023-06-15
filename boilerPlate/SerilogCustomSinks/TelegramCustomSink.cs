@@ -17,11 +17,14 @@ namespace boilerPlate.SerilogCustomSinks
         private readonly string _telegramToken = null;
         public TelegramCustomSink(LogEventLevel minimumLevel, IConfigService configService)
         {
-            _telegramToken = "6192549985:AAElMvWhByCK0saq8rth3CJ-KEBzr9iBmsk";
+            _configService = configService;
+            _telegramToken = _configService.Get("TelegramToken");
             _telegramBotClient = new TelegramBotClient(_telegramToken);
             _minimumLevel = minimumLevel;
-            _configService = configService;
-            _chatId = "607833984";
+            _chatId = _configService.Get("TelegramChatId");
+            // "TelegramToken": "6192549985:AAElMvWhByCK0saq8rth3CJ-KEBzr9iBmsk",
+            //"TelegramChatId": "607833984"
+
         }
 
         public void Dispose(string key)
