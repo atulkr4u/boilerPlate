@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Hosting;
 using boilerPlate.Controllers;
 using MediatR;
 using MediatR.NotificationPublishers;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0); // Specify the default API version
+    options.AssumeDefaultVersionWhenUnspecified = true; // Assume the default version when no version is specified in the request
+    options.ReportApiVersions = true; // Include API version information in response headers
+});
+
 builder.Services.AddHttpClient();
 builder.Services.AddHostedService<DefaultBGService>();
 
